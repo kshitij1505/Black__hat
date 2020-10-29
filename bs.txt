@@ -1,0 +1,21 @@
+int bs(const vector<int> &A,int B,bool state)
+{
+    int start=0;
+    int sol=-1;
+    int end=A.size()-1;
+    while(start<=end)
+    {
+        int mid=(start+end)>>1;
+        if(A[mid]==B)
+        {   
+           sol=mid;
+        }
+        else if(A[mid]>B)
+        end=mid-1;
+        else
+        start=mid+1;
+        
+    }
+    return sol;
+    
+}
